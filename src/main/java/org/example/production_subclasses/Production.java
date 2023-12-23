@@ -1,7 +1,8 @@
-package org.example;
+package org.example.production_subclasses;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.Rating;
 
 import java.util.List;
 

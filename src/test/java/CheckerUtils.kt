@@ -3,7 +3,13 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.node.ArrayNode
 import com.fasterxml.jackson.databind.node.ObjectNode
 import org.example.*
-import org.example.Observer
+import org.example.production_subclasses.Movie
+import org.example.production_subclasses.Production
+import org.example.production_subclasses.Series
+import org.example.user_subclasses.Admin
+import org.example.user_subclasses.Contributor
+import org.example.user_subclasses.Regular
+import org.example.user_subclasses.User
 /*
  *   FIXME: Pentru a functiona checker-ul aceste clase trebuie sa existe si sa aiba functiile si membrii necesari
  */
@@ -11,7 +17,6 @@ import org.example.Observer
 import org.reflections.Reflections
 import java.io.File
 import java.io.IOException
-import java.lang.reflect.Constructor
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
@@ -21,7 +26,6 @@ import java.util.*
 import java.util.function.Consumer
 import kotlin.collections.ArrayList
 import java.util.TreeSet
-import javax.lang.model.type.PrimitiveType
 
 class CheckerUtils {
     companion object {

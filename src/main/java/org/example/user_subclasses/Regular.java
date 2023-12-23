@@ -1,6 +1,8 @@
-package org.example;
+package org.example.user_subclasses;
 
-import java.util.SortedSet;
+import org.example.IMDB;
+import org.example.Request;
+import org.example.RequestsManager;
 
 public class Regular extends User implements RequestsManager {
     public Regular(Information information, int experience) {

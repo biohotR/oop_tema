@@ -1,8 +1,8 @@
-package org.example;
+package org.example.user_subclasses;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.Credentials;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

@@ -9,13 +9,13 @@ import CheckerUtils.Companion.loadUsers
 import org.example.Actor
 import org.example.IMDB
 import org.example.Request
-import org.example.Movie
-import org.example.Production
-import org.example.Series
-import org.example.Admin
-import org.example.Contributor
-import org.example.Regular
-import org.example.User
+import org.example.production_subclasses.Movie
+import org.example.production_subclasses.Production
+import org.example.production_subclasses.Series
+import org.example.user_subclasses.Admin
+import org.example.user_subclasses.Contributor
+import org.example.user_subclasses.Regular
+import org.example.user_subclasses.User
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

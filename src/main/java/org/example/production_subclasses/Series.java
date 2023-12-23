@@ -1,9 +1,12 @@
-package org.example;
+package org.example.production_subclasses;
+
+import org.example.Episode;
+import org.example.production_subclasses.Production;
 
 import java.util.List;
 import java.util.Map;
 
-public class Series extends Production{
+public class Series extends Production {
     private int launchYear;
     private int seasonCount;
     private Map<String, List<Episode>> seasonEpisodes;

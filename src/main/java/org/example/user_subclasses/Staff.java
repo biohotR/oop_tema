@@ -1,4 +1,4 @@
-package org.example;
+package org.example.user_subclasses;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,14 +7,17 @@ import java.util.TreeSet;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.Actor;
+import org.example.Request;
+import org.example.production_subclasses.Production;
 
 @Getter @Setter
 public abstract class Staff extends User implements StaffInterface {
     private List<Request> staffRequests;
-    private SortedSet<Comparable> productionsAndActorsAdded; // set for productions and actors
+    private SortedSet<Comparable> productionsAndActorsAdded; // set for productions and actors added by staff
 
-    public Staff(Information information, int experience) {
-        super(information, AccountType.ADMIN, experience);
+    public Staff(Information information, int experience, AccountType accountType) {
+        super(information, accountType, experience);
         this.staffRequests = new ArrayList<>();
         this.productionsAndActorsAdded = new TreeSet<>();
     }
@@ -55,9 +58,7 @@ public abstract class Staff extends User implements StaffInterface {
     }
 
     @Override
-    public void removeActorSystem(Actor a) {
-        productionsAndActorsAdded.remove(a);
-    }
+    public abstract void removeActorSystem(String name);
     public void updateProduction(Production p) {
         productionsAndActorsAdded.remove(p);
         productionsAndActorsAdded.add(p);

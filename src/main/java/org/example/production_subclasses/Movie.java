@@ -1,6 +1,8 @@
-package org.example;
+package org.example.production_subclasses;
 
-public class Movie extends Production{
+import org.example.production_subclasses.Production;
+
+public class Movie extends Production {
     private int movieLength;
     private int launchYear;
 

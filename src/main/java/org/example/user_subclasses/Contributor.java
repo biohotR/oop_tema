@@ -1,8 +1,13 @@
-package org.example;
+package org.example.user_subclasses;
+import org.example.IMDB;
+
+
+import org.example.Request;
+import org.example.RequestsManager;
 
 public class Contributor extends Staff implements RequestsManager {
-    public Contributor(User.Information information, int experience) {
-        super(information, experience);
+    public Contributor(Information information, int experience) {
+        super(information, experience, AccountType.CONTRIBUTOR);
     }
 
 
@@ -18,5 +23,6 @@ public class Contributor extends Staff implements RequestsManager {
 
     @Override
     public void removeActorSystem(String name) {
+        IMDB.getInstance().getActors().removeIf(actor -> actor.getName().equals(name));
     }
 }
